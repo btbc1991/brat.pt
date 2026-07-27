@@ -1,38 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BRAT.PT</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
 margin:0;
-background:white;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#ffffff;
+font-family:'Inter',sans-serif;
+
 display:flex;
 justify-content:center;
 align-items:center;
+
 height:100vh;
-font-family:Arial,Helvetica,sans-serif;
-text-align:center;
+
 color:#111;
+
+}
+
+.container{
+
+text-align:center;
+max-width:700px;
+padding:40px;
+
 }
 
 h1{
-font-size:72px;
-letter-spacing:12px;
-margin-bottom:20px;
+
+font-size:78px;
+font-weight:700;
+letter-spacing:14px;
+
+margin-bottom:40px;
+
 }
 
-p{
+.line{
+
+width:120px;
+height:1px;
+background:#ddd;
+
+margin:35px auto;
+
+}
+
+.subtitle{
+
+font-size:26px;
+font-weight:300;
+
+color:#555;
+
+margin-bottom:35px;
+
+}
+
+.text{
+
 font-size:20px;
+line-height:1.8;
+
 color:#666;
+
+margin-bottom:45px;
+
 }
 
 a{
-color:black;
+
+display:inline-block;
+
 text-decoration:none;
+
+color:#111;
+
+font-size:17px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+border:1px solid #111;
+
+padding:16px 38px;
+
+transition:.3s;
+
+}
+
+a:hover{
+
+background:#111;
+color:white;
+
+}
+
+.footer{
+
+margin-top:60px;
+
+font-size:13px;
+
+letter-spacing:3px;
+
+color:#999;
+
 }
 
 </style>
@@ -41,19 +131,33 @@ text-decoration:none;
 
 <body>
 
-<div>
+<div class="container">
 
-<h1>BRAT</h1>
+<div class="line"></div>
 
-<p>Premium Portuguese domain</p>
+<h1>BRAT.PT</h1>
 
-<p>This domain may be available for acquisition.</p>
+<p class="subtitle">
+Premium Portuguese Domain
+</p>
 
-<br>
+<p class="text">
+A rare four-letter digital asset<br>
+available for acquisition worldwide.
+</p>
 
-<a href="mailto:hello@brat.pt">Contact the owner</a>
+<a href="mailto:hello@brat.pt">
+CONTACT THE OWNER
+</a>
+
+<div class="line"></div>
+
+<div class="footer">
+PORTUGAL
+</div>
 
 </div>
 
 </body>
+
 </html>
