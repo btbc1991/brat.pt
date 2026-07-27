@@ -1,171 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BRAT.PT | Premium Portuguese Domain</title>
-<meta name="description" content="BRAT.PT is a rare premium Portuguese domain available for acquisition.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>BRAT | Premium Portuguese Domain</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
 
-    background:#ffffff;
-    color:#111111;
-
-    font-family:'Inter',sans-serif;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    min-height:100vh;
-
-    text-align:center;
+font-family:'Inter',sans-serif;
+background:#fafafa;
+color:#111;
+line-height:1.6;
 
 }
 
-.container{
+section{
 
-    max-width:700px;
-    padding:40px;
-
-    animation:fade 1.2s ease;
+padding:110px 8%;
 
 }
 
-.line{
+.hero{
 
-    width:120px;
-    height:1px;
+height:100vh;
 
-    background:#d9d9d9;
+display:flex;
 
-    margin:0 auto 45px;
+justify-content:center;
+align-items:center;
 
-}
+text-align:center;
 
-h1{
+background:
+linear-gradient(rgba(255,255,255,.82),rgba(255,255,255,.82)),
+url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80");
 
-    font-size:72px;
-    letter-spacing:12px;
-    font-weight:700;
-
-    margin-bottom:35px;
-
-}
-
-.subtitle{
-
-    font-size:24px;
-    color:#666;
-
-    font-weight:300;
-
-    margin-bottom:40px;
+background-size:cover;
+background-position:center;
 
 }
 
-.description{
+.hero h1{
 
-    font-size:20px;
-    line-height:1.8;
-    color:#555;
+font-size:92px;
 
-    margin-bottom:60px;
+letter-spacing:22px;
 
-}
+font-weight:700;
 
-a{
-
-    text-decoration:none;
-
-    color:#111;
-
-    border:1px solid #111;
-
-    padding:16px 42px;
-
-    display:inline-block;
-
-    letter-spacing:2px;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    transition:.25s;
+margin-bottom:30px;
 
 }
 
-a:hover{
+.hero h2{
 
-    background:#111;
-    color:white;
+font-size:40px;
 
-    transform:translateY(-2px);
+font-weight:300;
+
+margin-bottom:35px;
+
+}
+
+.hero p{
+
+font-size:21px;
+
+max-width:760px;
+
+margin:auto;
+
+color:#555;
+
+}
+
+.button{
+
+display:inline-block;
+
+margin-top:60px;
+
+padding:18px 44px;
+
+border:1px solid #111;
+
+text-decoration:none;
+
+color:#111;
+
+letter-spacing:2px;
+
+transition:.3s;
+
+}
+
+.button:hover{
+
+background:#111;
+color:white;
+
+}
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:70px;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+.number{
+
+font-size:70px;
+
+font-weight:700;
+
+color:#ddd;
+
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+margin-bottom:18px;
+
+font-size:26px;
+
+}
+
+.card p{
+
+color:#666;
+
+}
+
+.quote{
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+}
+
+.quote h2{
+
+font-size:48px;
+
+font-weight:300;
+
+max-width:900px;
+
+margin:auto;
+
+line-height:1.4;
+
+}
+
+.about{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.about h2{
+
+font-size:54px;
+
+margin-bottom:40px;
+
+}
+
+.about p{
+
+font-size:22px;
+
+color:#555;
+
+line-height:1.9;
 
 }
 
 .footer{
 
-    margin-top:60px;
+background:#f2f2f2;
 
-    font-size:13px;
-
-    letter-spacing:4px;
-
-    color:#999;
+text-align:center;
 
 }
 
-@keyframes fade{
+.footer h2{
 
-from{
+font-size:42px;
 
-opacity:0;
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
+margin-bottom:20px;
 
 }
 
-}
-
-@media(max-width:700px){
-
-h1{
-
-font-size:48px;
-letter-spacing:8px;
-
-}
-
-.subtitle{
+.footer p{
 
 font-size:20px;
 
+color:#666;
+
+margin-bottom:40px;
+
 }
 
-.description{
+.footer a{
 
-font-size:18px;
+font-size:22px;
+
+text-decoration:none;
+
+color:#111;
+
+border-bottom:1px solid #111;
+
+padding-bottom:4px;
+
+}
+
+small{
+
+display:block;
+
+margin-top:70px;
+
+color:#999;
+
+letter-spacing:3px;
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:58px;
+letter-spacing:10px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.about h2{
+
+font-size:38px;
+
+}
+
+.quote h2{
+
+font-size:34px;
 
 }
 
@@ -177,30 +300,124 @@ font-size:18px;
 
 <body>
 
-<div class="container">
+<section class="hero">
 
-<div class="line"></div>
+<div>
 
-<h1>BRAT.PT</h1>
+<h1>BRAT</h1>
 
-<p class="subtitle">
-Premium Portuguese Domain
+<h2>Designed for the brands that shape tomorrow.</h2>
+
+<p>
+
+A distinctive four-letter identity with exceptional branding potential.
+Simple. Memorable. Timeless.
+
 </p>
 
-<p class="description">
-A rare four-letter digital asset<br>
-available for acquisition worldwide.
+<a class="button" href="#contact">
+DISCOVER
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="features">
+
+<div class="card">
+
+<div class="number">01</div>
+
+<h3>Memorable</h3>
+
+<p>
+Four letters.
+Easy to pronounce.
+Instantly recognisable.
+Built for global brands.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="number">02</div>
+
+<h3>Exclusive</h3>
+
+<p>
+A premium Portuguese domain with strong international appeal and long-term digital value.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="number">03</div>
+
+<h3>Future Ready</h3>
+
+<p>
+Perfect for luxury, technology, fashion, architecture, automotive or design companies.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="quote">
+
+<h2>
+
+"The strongest brands begin with a name people never forget."
+
+</h2>
+
+</section>
+
+<section class="about">
+
+<h2>BRAT.PT</h2>
+
+<p>
+
+BRAT.PT is a rare four-letter Portuguese domain available for acquisition.
+
+Short domains with strong branding potential are increasingly difficult to secure.
+Whether you're launching a new company or investing in premium digital assets, BRAT represents a unique opportunity.
+
+</p>
+
+</section>
+
+<section class="footer" id="contact">
+
+<h2>Interested?</h2>
+
+<p>
+
+For acquisition enquiries, please contact the owner.
+
 </p>
 
 <a href="mailto:hello@brat.pt">
-CONTACT THE OWNER
+
+hello@brat.pt
+
 </a>
 
-<div class="footer">
-PORTUGAL
-</div>
+<small>
 
-</div>
+© BRAT.PT
+
+</small>
+
+</section>
 
 </body>
 </html>
