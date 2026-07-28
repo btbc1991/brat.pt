@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BRAT | Premium Portuguese Domain</title>
+<title>BRAT — Private Acquisition</title>
+
+<meta name="description" content="A rare Portuguese digital identity available for private acquisition.">
+
+<meta property="og:title" content="BRAT">
+<meta property="og:description" content="Private Acquisition">
+<meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -25,16 +33,103 @@ scroll-behavior:smooth;
 
 body{
 
-font-family:'Inter',sans-serif;
-background:#fafafa;
+font-family:Inter,sans-serif;
+
+background:white;
+
 color:#111;
-line-height:1.6;
+
+overflow-x:hidden;
+
+}
+
+::selection{
+
+background:#111;
+
+color:white;
 
 }
 
 section{
 
-padding:110px 8%;
+padding:140px 9%;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:34px 70px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:1000;
+
+transition:.45s;
+
+}
+
+nav.scrolled{
+
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(14px);
+
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+font-size:22px;
+
+font-weight:500;
+
+letter-spacing:10px;
+
+color:white;
+
+transition:.4s;
+
+}
+
+nav a{
+
+font-size:12px;
+
+letter-spacing:4px;
+
+color:white;
+
+transition:.4s;
+
+}
+
+nav.scrolled .logo,
+
+nav.scrolled a{
+
+color:#111;
 
 }
 
@@ -42,53 +137,107 @@ padding:110px 8%;
 
 height:100vh;
 
+position:relative;
+
 display:flex;
 
-justify-content:center;
 align-items:center;
 
-text-align:center;
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
 
 background:
-linear-gradient(rgba(255,255,255,.82),rgba(255,255,255,.82)),
-url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80");
+
+linear-gradient(
+
+90deg,
+
+rgba(0,0,0,.72),
+
+rgba(0,0,0,.20),
+
+rgba(0,0,0,0)
+
+),
+
+url("hero.jpg");
 
 background-size:cover;
+
 background-position:center;
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+width:640px;
+
+margin-left:9%;
+
+color:white;
+
+animation:fade 1.5s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
 
 }
 
 .hero h1{
 
-font-size:92px;
+font-size:88px;
 
-letter-spacing:22px;
+font-weight:300;
 
-font-weight:700;
+line-height:1.03;
+
+letter-spacing:-3px;
 
 margin-bottom:30px;
 
 }
 
-.hero h2{
-
-font-size:40px;
-
-font-weight:300;
-
-margin-bottom:35px;
-
-}
-
 .hero p{
 
-font-size:21px;
+font-size:23px;
 
-max-width:760px;
+line-height:1.9;
 
-margin:auto;
+max-width:520px;
 
-color:#555;
+color:#ececec;
+
+margin-bottom:60px;
 
 }
 
@@ -96,52 +245,136 @@ color:#555;
 
 display:inline-block;
 
-margin-top:60px;
+padding:20px 48px;
 
-padding:18px 44px;
+border:1px solid rgba(255,255,255,.55);
 
-border:1px solid #111;
+letter-spacing:3px;
 
-text-decoration:none;
+font-size:12px;
 
-color:#111;
-
-letter-spacing:2px;
-
-transition:.3s;
+transition:.35s;
 
 }
 
 .button:hover{
 
-background:#111;
-color:white;
+background:white;
+
+color:black;
 
 }
 
-.features{
+.scroll{
+
+position:absolute;
+
+bottom:50px;
+
+left:9%;
+
+font-size:11px;
+
+letter-spacing:5px;
+
+color:white;
+
+opacity:.65;
+
+}
+.big-title{
+
+font-size:72px;
+
+font-weight:300;
+
+line-height:1.1;
+
+letter-spacing:-2px;
+
+margin-bottom:35px;
+
+max-width:750px;
+
+}
+
+.small-title{
+
+font-size:12px;
+
+letter-spacing:4px;
+
+color:#888;
+
+margin-bottom:25px;
+
+}
+
+.text{
+
+font-size:21px;
+
+line-height:1.9;
+
+color:#666;
+
+max-width:650px;
+
+}
+
+.two-columns{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:1fr 1fr;
 
-gap:70px;
+gap:90px;
+
+align-items:center;
+
+}
+
+.spacer{
+
+height:80px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:50px;
+
+margin-top:80px;
 
 }
 
 .card{
 
-padding:20px;
+padding-top:35px;
+
+border-top:1px solid #ddd;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
 
 }
 
 .number{
 
-font-size:70px;
+font-size:54px;
 
-font-weight:700;
+font-weight:300;
 
-color:#ddd;
+color:#d2d2d2;
 
 margin-bottom:20px;
 
@@ -149,15 +382,21 @@ margin-bottom:20px;
 
 .card h3{
 
-margin-bottom:18px;
+font-size:24px;
 
-font-size:26px;
+font-weight:500;
+
+margin-bottom:20px;
 
 }
 
 .card p{
 
+line-height:1.8;
+
 color:#666;
+
+font-size:18px;
 
 }
 
@@ -169,255 +408,547 @@ color:white;
 
 text-align:center;
 
+padding:180px 10%;
+
 }
 
 .quote h2{
 
-font-size:48px;
+font-size:78px;
 
 font-weight:300;
 
-max-width:900px;
+line-height:1.15;
+
+letter-spacing:-3px;
+
+max-width:1000px;
 
 margin:auto;
 
-line-height:1.4;
-
 }
 
-.about{
+.quote p{
 
-max-width:900px;
-
-margin:auto;
-
-text-align:center;
-
-}
-
-.about h2{
-
-font-size:54px;
-
-margin-bottom:40px;
-
-}
-
-.about p{
+margin-top:45px;
 
 font-size:22px;
 
-color:#555;
+color:#bfbfbf;
 
-line-height:1.9;
+max-width:700px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+line-height:1.8;
 
 }
 
-.footer{
+.acquisition{
 
-background:#f2f2f2;
+background:#fafafa;
 
 text-align:center;
 
 }
 
-.footer h2{
+.acquisition h2{
 
-font-size:42px;
+font-size:68px;
 
-margin-bottom:20px;
+font-weight:300;
+
+margin-bottom:25px;
+
+letter-spacing:-2px;
 
 }
 
-.footer p{
+.acquisition p{
 
 font-size:20px;
 
+line-height:1.9;
+
+max-width:700px;
+
+margin:auto;
+
 color:#666;
 
-margin-bottom:40px;
+margin-bottom:60px;
 
 }
 
-.footer a{
+.mail{
 
-font-size:22px;
+display:inline-block;
 
-text-decoration:none;
+padding:22px 54px;
 
-color:#111;
+border:1px solid #111;
 
-border-bottom:1px solid #111;
+letter-spacing:4px;
 
-padding-bottom:4px;
+font-size:12px;
+
+transition:.35s;
 
 }
 
-small{
+.mail:hover{
 
-display:block;
+background:#111;
 
-margin-top:70px;
+color:white;
+
+}
+
+footer{
+
+padding:60px;
+
+text-align:center;
+
+letter-spacing:4px;
+
+font-size:11px;
 
 color:#999;
 
-letter-spacing:3px;
+}
+
+.fade{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.fade.visible{
+
+opacity:1;
+
+transform:none;
 
 }
 
 @media(max-width:900px){
 
+nav{
+
+padding:25px;
+
+}
+
 .hero h1{
 
-font-size:58px;
-letter-spacing:10px;
+font-size:56px;
 
 }
 
-.hero h2{
+.hero-content{
 
-font-size:28px;
+width:auto;
+
+margin:120px 8%;
 
 }
 
-.about h2{
+.two-columns{
 
-font-size:38px;
+grid-template-columns:1fr;
+
+}
+
+.big-title{
+
+font-size:42px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
 
 }
 
 .quote h2{
 
-font-size:34px;
+font-size:46px;
 
 }
 
+.acquisition h2{
+
+font-size:44px;
+
 }
 
-</style>
+}</style>
 
 </head>
 
 <body>
 
-<section class="hero">
+<nav>
 
-<div>
+<div class="logo">
 
-<h1>BRAT</h1>
+BRAT
 
-<h2>Designed for the brands that shape tomorrow.</h2>
+</div>
+
+<a href="#contact">
+
+CONTACT
+
+</a>
+
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>
+
+Own the name<br>
+before the world<br>
+remembers it.
+
+</h1>
 
 <p>
 
-A distinctive four-letter identity with exceptional branding potential.
-Simple. Memorable. Timeless.
+A rare Portuguese digital identity
+created for brands, founders and investors
+who understand the value of simplicity.
 
 </p>
 
-<a class="button" href="#contact">
-DISCOVER
+<a href="#contact" class="button">
+
+PRIVATE ACQUISITION
+
 </a>
 
 </div>
 
-</section>
+<div class="scroll">
 
-<section>
-
-<div class="features">
-
-<div class="card">
-
-<div class="number">01</div>
-
-<h3>Memorable</h3>
-
-<p>
-Four letters.
-Easy to pronounce.
-Instantly recognisable.
-Built for global brands.
-</p>
+SCROLL ↓
 
 </div>
 
-<div class="card">
+</header>
 
-<div class="number">02</div>
+<section class="fade">
 
-<h3>Exclusive</h3>
+<div class="small-title">
 
-<p>
-A premium Portuguese domain with strong international appeal and long-term digital value.
-</p>
+PHILOSOPHY
 
 </div>
 
-<div class="card">
+<div class="two-columns">
 
-<div class="number">03</div>
+<div>
 
-<h3>Future Ready</h3>
+<h2 class="big-title">
 
-<p>
-Perfect for luxury, technology, fashion, architecture, automotive or design companies.
-</p>
+A great name
+doesn't introduce
+a brand.
 
-</div>
-
-</div>
-
-</section>
-
-<section class="quote">
-
-<h2>
-
-"The strongest brands begin with a name people never forget."
+It becomes it.
 
 </h2>
 
+</div>
+
+<div>
+
+<p class="text">
+
+The strongest identities are often the simplest.
+Short names stay in memory, travel across languages
+and age without losing relevance.
+
+BRAT.pt is not simply a web address.
+
+It is a rare digital asset capable of becoming
+the foundation of a premium brand.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="about">
+<section class="fade">
 
-<h2>BRAT.PT</h2>
+<div class="small-title">
+
+WHY BRAT
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="number">
+
+01
+
+</div>
+
+<h3>
+
+Rare
+
+</h3>
 
 <p>
 
-BRAT.PT is a rare four-letter Portuguese domain available for acquisition.
+Four-letter .PT domains with genuine branding
+potential are becoming increasingly scarce.
 
-Short domains with strong branding potential are increasingly difficult to secure.
-Whether you're launching a new company or investing in premium digital assets, BRAT represents a unique opportunity.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="number">
+
+02
+
+</div>
+
+<h3>
+
+Memorable
+
+</h3>
+
+<p>
+
+Simple.
+Powerful.
+Easy to pronounce.
+Easy to remember.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="number">
+
+03
+
+</div>
+
+<h3>
+
+Timeless
+
+</h3>
+
+<p>
+
+Built for decades rather than trends.
+A digital identity designed to last.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="quote fade">
+
+<h2>
+
+Some names are bought.
+
+Others become legacy.
+
+</h2>
+
+<p>
+
+The value of a premium domain isn't measured by its length,
+but by the opportunities it creates.
+
+BRAT.pt is offered through a private acquisition process.
 
 </p>
 
 </section>
 
-<section class="footer" id="contact">
+<section class="fade">
 
-<h2>Interested?</h2>
+<div class="two-columns">
 
-<p>
+<div>
 
-For acquisition enquiries, please contact the owner.
+<div class="small-title">
+
+PRIVATE ACQUISITION
+
+</div>
+
+<h2 class="big-title">
+
+Available for the
+right owner.
+
+</h2>
+
+</div>
+
+<div>
+
+<p class="text">
+
+BRAT.pt is currently available through direct negotiation.
+
+Whether you are building a new company,
+rebranding an existing business or investing
+in premium digital assets, this domain offers
+a rare opportunity to secure a memorable
+Portuguese identity.
+
+Every enquiry is handled privately and
+confidentially.
 
 </p>
 
-<a href="mailto:hello@brat.pt">
+</div>
+
+</div>
+
+</section>
+
+<section class="acquisition fade" id="contact">
+
+<div class="small-title">
+
+CONTACT
+
+</div>
+
+<h2>
+
+Interested in BRAT.pt?
+
+</h2>
+
+<p>
+
+For acquisition enquiries or further information,
+please contact directly.
+
+</p>
+
+<a class="mail" href="mailto:hello@brat.pt">
 
 hello@brat.pt
 
 </a>
 
-<small>
-
-© BRAT.PT
-
-</small>
-
 </section>
 
+<footer>
+
+BRAT.pt · Private Acquisition · Portugal
+
+</footer>
+<script>
+
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 40) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+document.querySelectorAll(".fade").forEach(section => {
+
+    observer.observe(section);
+
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+const hero = document.querySelector(".hero");
+
+window.addEventListener("mousemove",(e)=>{
+
+    const x = (e.clientX / window.innerWidth - 0.5) * 12;
+    const y = (e.clientY / window.innerHeight - 0.5) * 12;
+
+    hero.style.transform = `translate(${x}px, ${y}px)`;
+
+});
+
+</script>
+
 </body>
+
 </html>
